@@ -1,0 +1,180 @@
+genereal {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #3b2d5b, #6e379e);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+/* Resume Container */
+.resume-container {
+    max-width: 800px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+/* Profile Section */
+.profile {
+    grid-column: span 2;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.profile-picture {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 4px solid #fff;
+}
+
+.profile h1 {
+    margin: 0.5rem 0 0;
+    font-size: 1.8rem;
+}
+
+.profile h2 {
+    font-size: 1rem;
+    font-weight: 300;
+    color: #ff5cad;
+}
+
+/* About, Skills, Experience, and Contact Sections */
+.about, .skills, .experience, .contact {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.about h3, .skills h3, .experience h3, .contact h3 {
+    color: #ff5cad;
+    margin-bottom: 0.5rem;
+}
+
+/* Skills Section */
+.skill {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.skill span {
+    width: 100px;
+    font-size: 0.9rem;
+}
+
+.skill-bar {
+    flex: 1;
+    height: 8px;
+    background-color: #333;
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+}
+
+.skill-bar::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    background-color: #ff5cad;
+    width: 0;
+    transition: width 0.5s ease;
+}
+
+/* Experience Section */
+.experience .job {
+    margin-bottom: 1rem;
+}
+
+/* Contact Section */
+.contact p {
+    font-size: 0.9rem;
+}
+
+/* Bottom Navigation */
+.bottom-nav {
+    display: flex;
+    justify-content: center; /* Center the nav items horizontally */
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.5rem;
+    border-radius: 8px;
+    margin-bottom: 1rem; /* Space below the navbar */
+    position: relative; /* Ensure it stays in flow of the document */
+    width: 100%; /* Ensure it spans the full width of the viewport */
+    max-width: 800px; /* Optional: Constrain it to the same width as the resume */
+    left: 50%; /* Centering */
+    transform: translateX(-50%); /* Adjust to center */
+    z-index: 1; /* Ensure it stays above content */
+    position: fixed; /* Fixes the navbar at the top */
+top: 1rem; /* Adjust as necessary for spacing from the top */
+
+}
+
+.bottom-nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+}
+
+.bottom-nav a:hover {
+    color: #ff5cad;
+}
+
+
+/* Media Queries for Responsiveness */
+@media (max-width: 800px) {
+    .resume-container {
+        grid-template-columns: 1fr; /* Stack columns on smaller screens */
+    }
+
+    .profile h1 {
+        font-size: 1.5rem; /* Reduce font size for smaller screens */
+    }
+
+    .profile h2 {
+        font-size: 0.9rem; /* Smaller subtitle */
+    }
+
+    .skill span {
+        width: auto; /* Allow skill labels to be more flexible */
+        font-size: 0.8rem; /* Smaller font for skills */
+    }
+
+    .contact p {
+        font-size: 0.8rem; /* Adjust font size for contact information */
+    }
+
+    .bottom-nav {
+        flex-direction: column; /* Stack navigation links vertically */
+    }
+}
+.skill-bar {
+    flex: 1;
+    height: 8px;
+    background-color: #333;
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+    transition: width 0.5s ease; /* Add smooth transition */
+}
+.profile-picture {
+    width: 20vw; /* Adjusts based on viewport width */
+    height: auto;
+    max-width: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+		
